@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./styles.css";
 
 var types = ["all", "js", "business", "fiction"];
@@ -35,34 +36,15 @@ var books = [
   },
 ];
 
+const [bookstate, useBookstate] = useState([]);
+
 export default function App() {
   return (
     <div className="App">
+      <h1>Library</h1>
       {types.map((x) => {
-        return (
-          <span>
-            <button
-              onClick={() => {
-                books.map((y) => {
-                  if (y.type == x) {
-                    return (
-                      <div>
-                        <h2>{y.name}</h2>
-                        <h2>{y.rating}</h2>
-                      </div>
-                    );
-                  }
-                });
-              }}
-              name={x}
-              className="button"
-            >
-              {x}
-            </button>
-          </span>
-        );
+        return <button className="button">{x}</button>;
       })}
-      {}
     </div>
   );
 }
