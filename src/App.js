@@ -1,7 +1,5 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import "./styles.css";
-
-var types = ["all", "js", "business", "fiction"];
 
 var books = [
   {
@@ -36,7 +34,7 @@ var books = [
   },
 ];
 
-const [bookstate, useBookstate] = useState([]);
+// const [bookstate, useBookstate] = useState([]);
 
 export default function App() {
   return (
